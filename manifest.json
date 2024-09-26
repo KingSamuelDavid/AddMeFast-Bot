@@ -1,0 +1,56 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "AddMeFast tool for collecting points",
+  "description": "Tool fixed for Twitter, Reddit, YouTube Fixed",
+  "version": "2.05.2",
+  "default_locale": "en",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": [
+    
+    "storage",
+    "tabs"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.addmefast.com/*",
+        "*://*.tiktok.com/*",
+        "*://*.facebook.com/*",
+        "*://*.instagram.com/*",
+        "*://*.twitter.com/*",
+		"*://*.x.com/*",
+        "*://*.youtube.com/*",
+        "*://*.soundcloud.com/*",
+        "*://*.reddit.com/*"
+      ],
+      "all_frames": false,
+      "js": [
+        "jquery.min.js",
+        "inject.js",
+        "tiktok.js",
+        "instagram.js",
+        "twitter.js",
+        "fb.js",
+        "yt.js",
+        "sc.js",
+        "reddit.js"
+      ]
+    }
+  ],
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "icons/icon19.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
