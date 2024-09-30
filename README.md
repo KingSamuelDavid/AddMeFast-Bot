@@ -1,4 +1,4 @@
-# AddMeFactBotMod
+# AddMeFast Bot Chrome Extensions - FIXED
 An automated Chrome extension bot that allows you to run AddMeFast automatically to collect points. 
 
 ### Disclaimer
